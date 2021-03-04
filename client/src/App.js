@@ -44,7 +44,7 @@ export default function App() {
         <label>
           User:
           <br />
-          <input name="name" />
+          <input name="name" required />
         </label>
         <Button>Create user</Button>
       </form>
@@ -58,13 +58,13 @@ export default function App() {
         <label>
           Text:
           <br />
-          <input name="text" />
+          <input name="text" required />
         </label>
         <label>
           <br />
           Author ID:
           <br />
-          <input name="author" />
+          <input name="author" required />
         </label>
         <br />
         <Button>Create card</Button>

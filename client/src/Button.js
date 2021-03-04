@@ -5,4 +5,9 @@ export default styled.button`
   border-radius: 20px;
   background: #eee;
   text-transform: uppercase;
+
+  &:hover {
+    background: #333;
+    color: white;
+  }
 `
