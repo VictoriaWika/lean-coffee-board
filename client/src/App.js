@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import Button from './Button'
 import createCard from './services/createCard'
 import createUser from './services/createUser'
 import getCards from './services/getCards'
@@ -43,9 +44,9 @@ export default function App() {
         <label>
           User:
           <br />
-          <input name="name" />
+          <input name="name" required />
         </label>
-        <button>Create user</button>
+        <Button>Create user</Button>
       </form>
       {users.map(user => (
         <div key={user._id}>
@@ -57,16 +58,16 @@ export default function App() {
         <label>
           Text:
           <br />
-          <input name="text" />
+          <input name="text" required />
         </label>
         <label>
           <br />
           Author ID:
           <br />
-          <input name="author" />
+          <input name="author" required />
         </label>
         <br />
-        <button>Create card</button>
+        <Button>Create card</Button>
       </form>
       {cards.map(card => (
         <div key={card._id}>

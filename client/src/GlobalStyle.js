@@ -12,7 +12,7 @@ body {
 }
 input,
 button {
-  font-size: inherit;
-  padding: 5px 10px;
+  font-size: 90%;
+  padding: 5px 20px;
 }
 `
