@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react'
+import { useEffect, useState } from 'react'
+import styled from 'styled-components/macro'
 import Button from './Button'
 import createCard from './services/createCard'
 import createUser from './services/createUser'
@@ -38,11 +39,11 @@ export default function App() {
   }
 
   return (
-    <div>
+    <AppLayout>
       <h2>Users:</h2>
       <form onSubmit={handleUserSubmit}>
         <label>
-          User:
+          Name:
           <br />
           <input name="name" required />
         </label>
@@ -74,6 +75,11 @@ export default function App() {
           {card.text}({card.author.name})
         </div>
       ))}
-    </div>
+    </AppLayout>
   )
 }
+
+const AppLayout = styled.div`
+  display: grid;
+  gap: 10px;
+`
