@@ -71,9 +71,10 @@ export default function App() {
         <Button>Create card</Button>
       </form>
       {cards.map(card => (
-        <div key={card._id}>
-          {card.text}({card.author.name})
-        </div>
+        <Card key={card._id}>
+          <h3>{card.text}</h3>
+          {card.author.name}
+        </Card>
       ))}
     </AppLayout>
   )
@@ -82,4 +83,11 @@ export default function App() {
 const AppLayout = styled.div`
   display: grid;
   gap: 10px;
+`
+
+const Card = styled.div`
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+  background: #eef;
 `
